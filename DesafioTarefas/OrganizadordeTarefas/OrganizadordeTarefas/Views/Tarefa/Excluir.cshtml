@@ -1,0 +1,42 @@
+﻿@model OrganizadordeTarefas.Models.Tarefa
+
+@{
+	ViewData["Title "] = "Excluir Tarefa";
+}
+
+<h1 style="color: red;">Deseja realmente deletar essa tarefa? Essa operação e irreversível!</h1>
+
+<hr />
+<div>
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.Titulo)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.Titulo)
+		</dt>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.Descricao)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.Descricao)
+		</dt>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.Data)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.Data)
+		</dt>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.Status)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.Status)
+		</dt>
+	</dl>
+</div>
+<form asp-action="Excluir">
+	<input type="submit" value="Excluir" class="btn btn-outline-danger" />
+</form>
+<br />
+<a asp-action="Index" class="btn btn-outline-primary">Voltar</a>
